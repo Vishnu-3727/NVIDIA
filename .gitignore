@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+
+# Large profiling files — exceed GitHub 100MB hard limit
+**/*.nsys-rep
+**/phase4_ncu.ncu-rep
+
+# Allow small targeted kernel reports
+!**/phase4_conv_kernel.ncu-rep
+!**/phase4_gemm_kernel.ncu-rep
+
+# uv lock files
+uv.lock
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large model files
+*.bin
+*.engine
+*.onnx

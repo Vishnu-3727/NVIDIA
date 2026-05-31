@@ -1,0 +1,9 @@
+{
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "depth_alone_ms": 1.5493878412246704,
+  "detect_alone_ms": 0.13554399877786635,
+  "sequential_ms": 1.3265958416461945,
+  "parallel_ms": 1.4456768035888672,
+  "speedup": 0.9176296101265121,
+  "saving_ms": -0.1190809619426727
+}
