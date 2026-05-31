@@ -10,22 +10,22 @@
 
 | Domain | Folder | Owner | Responsibility |
 |---|---|---|---|
-| A | domain-a-visual-slam/ | TBD | cuVSLAM integration, VIO, trajectory accuracy |
+| A | domain-a-visual-slam/ | Paresh | cuVSLAM integration, VIO, trajectory accuracy |
 | B | domain-b-gpu-optimization/ | Vishnu | Profiling, roofline, memory optimization, CUDA streams |
-| C | domain-c-ai-inference/ | TBD | TensorRT INT8, obstacle detection, model optimization |
-| D | domain-d-robotics-planning/ | TBD | Pipeline integration, path planning, SLURM, Perlmutter |
+| C | domain-c-ai-inference/ | Yugawathi | TensorRT INT8, obstacle detection, model optimization |
+| D | domain-d-robotics-planning/ | Kamlesh | Pipeline integration, path planning, SLURM, Perlmutter |
 
 ## Final Target (SCRUM Table)
 
 | Stage | CPU Baseline | GPU Target | Speedup |
 |---|---|---|---|
-| Feature Extraction | 28 ms | 6 ms | 4.7× |
-| VIO / EKF | 12 ms | 5 ms | 2.4× |
-| Depth Estimation | 18 ms | 3 ms | 6× |
-| Obstacle Detection | 42 ms | 2 ms | 21× |
-| Path Planning | 8 ms | 1.5 ms | 5.3× |
-| Transfer Overhead | ~5 ms | 0.5 ms | 10× |
-| **End-to-End** | **~65 ms** | **~11 ms** | **~5.9×** |
+| Feature Extraction | 28 ms | 6 ms | 4.7Ã— |
+| VIO / EKF | 12 ms | 5 ms | 2.4Ã— |
+| Depth Estimation | 18 ms | 3 ms | 6Ã— |
+| Obstacle Detection | 42 ms | 2 ms | 21Ã— |
+| Path Planning | 8 ms | 1.5 ms | 5.3Ã— |
+| Transfer Overhead | ~5 ms | 0.5 ms | 10Ã— |
+| **End-to-End** | **~65 ms** | **~11 ms** | **~5.9Ã—** |
 
 ## Current Status
 
