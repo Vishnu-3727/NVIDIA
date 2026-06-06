@@ -1,4 +1,4 @@
-﻿import time, json, argparse
+import time, json, argparse
 from pathlib import Path
 from datetime import datetime
 import numpy as np
@@ -302,7 +302,7 @@ def main():
           f"({stage_means[bottleneck]/t_arr.mean()*100:.1f}% of pipeline)\n")
     print("  NEXT: Run with Nsight Systems:")
     print("  nsys profile `")
-    print("    --trace=cuda,nvtx,osrt `")
+    print("    --trace=cuda,nvtx,wddm `")
     print("    --cuda-memory-usage=true `")
     print("    --output=profiling\\nsight_reports\\session1_baseline `")
     print("    uv run python benchmarks\\pipeline\\pipeline_benchmark.py --frames 30")
@@ -332,3 +332,4 @@ def main():
 
 if __name__=="__main__":
     main()
+
