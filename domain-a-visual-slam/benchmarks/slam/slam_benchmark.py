@@ -197,7 +197,7 @@ def stage2_vio_ekf(cache, mode):
 
             # Kalman gain K = P*H^T * S^-1
             PHt  = torch.matmul(cache["P_cov"], cache["H_obs"].t())
-            cache["K_gain"].copy_(torch.matmul(PHt, torch.linalg.inv(S)))
+            cache["K_gain"].copy_(torch.linalg.solve(S.t(), PHt.t()).t())
 
             # State + covariance update
             cache["x_state"].add_(cache["K_gain"] @ y)
