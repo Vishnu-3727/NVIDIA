@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-06-14T13:12:38.682074",
+  "phase": 3,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "frames": 100,
+  "ceilings": {
+    "rtx_fp32_gflops": 15100,
+    "rtx_bw_gbs": 272,
+    "rtx_ridge": 55.51470588235294,
+    "a100_fp32_gflops": 19500,
+    "a100_bw_gbs": 2039,
+    "a100_ridge": 9.563511525257478
+  },
+  "kernel_oi": [
+    {
+      "kernel": "S1: Gradients (Ix, Iy)",
+      "flops": 1839202,
+      "bytes": 11043208,
+      "oi": 0.1665459891727114,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 45.3005090549775,
+      "proj_a100_gflops": 339.58727192315854
+    },
+    {
+      "kernel": "S1: Structure Tensor (Ixx...)",
+      "flops": 2758803,
+      "bytes": 18392020,
+      "oi": 0.15,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 40.8,
+      "proj_a100_gflops": 305.84999999999997
+    },
+    {
+      "kernel": "S1: Conv2d 5x5 (Harris smooth)",
+      "flops": 137940150,
+      "bytes": 22070424,
+      "oi": 6.25,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 1700.0,
+      "proj_a100_gflops": 12743.75
+    },
+    {
+      "kernel": "S1: Harris Response R",
+      "flops": 5517606,
+      "bytes": 14713616,
+      "oi": 0.375,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 102.0,
+      "proj_a100_gflops": 764.625
+    },
+    {
+      "kernel": "S1: TopK-500 (radixSort)",
+      "flops": 18217892,
+      "bytes": 7356808,
+      "oi": 2.4763310392224454,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 673.5620426685051,
+      "proj_a100_gflops": 5049.238988974566
+    },
+    {
+      "kernel": "S1: LK Optical Flow (u, v)",
+      "flops": 6437207,
+      "bytes": 22070424,
+      "oi": 0.2916666666666667,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 79.33333333333334,
+      "proj_a100_gflops": 594.7083333333334
+    },
+    {
+      "kernel": "S2: EKF Predict (F@x, F@P@Ft)",
+      "flops": 14175,
+      "bytes": 3720,
+      "oi": 3.810483870967742,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 1036.4516129032259,
+      "proj_a100_gflops": 7769.576612903226
+    },
+    {
+      "kernel": "S2: EKF Update (K, x, P)",
+      "flops": 10356,
+      "bytes": 2256,
+      "oi": 4.590425531914893,
+      "bound": "MEMORY",
+      "proj_rtx_gflops": 1248.5957446808509,
+      "proj_a100_gflops": 9359.877659574468
+    }
+  ],
+  "achieved": {
+    "stage1_ms": 0.9277645111083984,
+    "stage1_bw_gbs": 103.09351010390698,
+    "stage1_util_pct": 37.90202577349521,
+    "stage2_ms": 0.43358558654785156,
+    "stage2_bw_gbs": 0.013782745980049948,
+    "stage2_util_pct": 0.005067186022077187
+  },
+  "a100_projection": {
+    "bw_ratio": 7.4963235294117645,
+    "stage1_a100_ms": 0.12376260275698106,
+    "stage2_a100_ms": 0.05783976436538285,
+    "total_rtx_ms": 1.36135009765625,
+    "total_a100_ms": 0.1816023671223639,
+    "speedup": 7.4963235294117645
+  }
+}

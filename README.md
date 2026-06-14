@@ -30,7 +30,7 @@
 ## Current Status
 
 - [x] Domain B: Phase 1-4 complete (profiling, transfers, streams, roofline, ncu analysis)
-- [ ] Domain A: cuVSLAM integration
+- [x] Domain A: Phase 1-4 complete (baseline 1.78ms, 22.5x CPU speedup, cuVSLAM integration plan, roofline, pipeline handoff)
 - [ ] Domain C: TensorRT INT8 conversion
 - [ ] Domain D: Pipeline integration + Perlmutter setup
 

@@ -1,0 +1,41 @@
+{
+  "n_frames": 500,
+  "dt": 0.033,
+  "ate_imu_m": 0.0845189020037651,
+  "ate_cuvslam_m": 0.005071121267974377,
+  "ate_target_m": 0.05,
+  "ate_imu_pass": false,
+  "ate_cuvslam_pass": true,
+  "rpe_results": [
+    {
+      "delta_frames": 5,
+      "delta_sec": 0.165,
+      "rpe_imu_m": 0.018722115084528923,
+      "rpe_cuvslam_m": 0.0011233605910092592
+    },
+    {
+      "delta_frames": 10,
+      "delta_sec": 0.33,
+      "rpe_imu_m": 0.02515704371035099,
+      "rpe_cuvslam_m": 0.001509454334154725
+    },
+    {
+      "delta_frames": 30,
+      "delta_sec": 0.99,
+      "rpe_imu_m": 0.0416574664413929,
+      "rpe_cuvslam_m": 0.002499460941180587
+    },
+    {
+      "delta_frames": 50,
+      "delta_sec": 1.65,
+      "rpe_imu_m": 0.05344494432210922,
+      "rpe_cuvslam_m": 0.0032067031133919954
+    },
+    {
+      "delta_frames": 100,
+      "delta_sec": 3.3,
+      "rpe_imu_m": 0.0642738938331604,
+      "rpe_cuvslam_m": 0.003856442403048277
+    }
+  ]
+}
