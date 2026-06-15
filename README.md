@@ -13,7 +13,7 @@
 | A | domain-a-visual-slam/ | Paresh | cuVSLAM integration, VIO, trajectory accuracy |
 | B | domain-b-gpu-optimization/ | Vishnu | Profiling, roofline, memory optimization, CUDA streams |
 | C | domain-c-ai-inference/ | Yugawathi | TensorRT INT8, obstacle detection, model optimization |
-| D | domain-d-robotics-planning/ | Kamlesh | Pipeline integration, path planning, SLURM, Perlmutter |
+| D | domain-d-robotics-planning/ | Kamalesh | Pipeline integration, path planning, SLURM, Perlmutter |
 
 ## Final Target (SCRUM Table)
 
