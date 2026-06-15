@@ -309,7 +309,7 @@ def main():
 
     # --- Summary ---
     cuvslam_rtx   = 1.77   # Phase 1 measured (PyTorch sim)
-    cuvslam_a100  = 0.40   # projected: 5.7x BW gain + algorithmic speedup
+    cuvslam_a100  = 0.40   # projected: 7.5x BW gain + algorithmic speedup
     glue_cost     = full["mean_ms"]
     total_rtx     = cuvslam_rtx  + glue_cost
     total_a100    = cuvslam_a100 + glue_cost

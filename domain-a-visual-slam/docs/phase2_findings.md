@@ -36,7 +36,7 @@ Phase 2 measures everything **around** the cuVSLAM call:
 | uint8 → float32 + normalise (both frames) | 0.0872 ms | 84.57 GB/s |
 
 - Conversion is memory-bound — 84.57 GB/s approaches GDDR6 ceiling (272 GB/s theoretical, typical effective ~100-130 GB/s for elementwise)
-- On A100 (HBM2, 1,555 GB/s): expect ~0.015 ms (~5.7x faster)
+- On A100 (HBM2e, 2,039 GB/s): expect ~0.012 ms (~7.5x faster)
 - cuVSLAM may accept uint8 natively — if so, this step disappears entirely
 
 ## Section 3 — Pose Output Extraction (D2H)

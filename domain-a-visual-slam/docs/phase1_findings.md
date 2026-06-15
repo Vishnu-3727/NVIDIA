@@ -44,7 +44,7 @@
 ## A100 Projection
 
 - Domain B Phase 4: ALL pipeline stages memory-bound on RTX 4060
-- A100 HBM2 (1,555 GB/s) vs RTX 4060 GDDR6 (272 GB/s) = 5.7× bandwidth advantage
+- A100 HBM2e (2,039 GB/s) vs RTX 4060 GDDR6 (272 GB/s) = 7.5× bandwidth advantage
 - Expected Stage 1+2 speedup on A100: ~4–5× from bandwidth alone (before cuVSLAM)
 - cuVSLAM replaces the PyTorch simulation → additional algorithmic speedup on top
 - Projected total on A100: ~0.35–0.45ms (well within 11ms budget)
@@ -87,8 +87,8 @@ Kernels visible in the CUDA API row under `stage1_feature_extraction`:
 
 ### A100 Implication from Profile
 
-On A100 (HBM2, 1,555 GB/s vs RTX 4060 GDDR6 272 GB/s):
-- Memory-bound elementwise kernels in Stage 1 will be ~5.7× faster
+On A100 (HBM2e, 2,039 GB/s vs RTX 4060 GDDR6 272 GB/s):
+- Memory-bound elementwise kernels in Stage 1 will be ~7.5× faster
 - `radixSort` (compute-bound) will benefit less — NMS replacement recommended
 - cuVSLAM replaces the entire PyTorch Stage 1+2 simulation with optimised C++ CUDA kernels — JIT spikes disappear entirely
 
