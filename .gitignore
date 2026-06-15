@@ -4,13 +4,17 @@ __pycache__/
 *.pyo
 .venv/
 
-# Large profiling files — exceed GitHub 100MB hard limit
+# Large / binary profiling files â€” exceed GitHub limits or not diffable
 **/*.nsys-rep
+**/*.sqlite
 **/phase4_ncu.ncu-rep
 
 # Allow small targeted kernel reports
 !**/phase4_conv_kernel.ncu-rep
 !**/phase4_gemm_kernel.ncu-rep
+
+# Allow small text stats exported from nsys (committable, diffable)
+!**/*_stats.txt
 
 # uv lock files
 uv.lock

@@ -1,0 +1,117 @@
+
+NOTICE: Existing SQLite export found: profiling\nsight_reports\session1_slam_baseline.sqlite
+        It is assumed file was previously exported from: profiling\nsight_reports\session1_slam_baseline.nsys-rep
+        Consider using --force-export=true if needed.
+
+Processing [profiling\nsight_reports\session1_slam_baseline.sqlite] with [C:\Program Files\NVIDIA Corporation\Nsight Systems 2026.3.1\target-windows-x64\reports\nvtx_pushpop_sum.py]... 
+
+ ** NVTX Push/Pop Range Summary (nvtx_pushpop_sum):
+
++----------+-----------------+-----------+------------+-----------+----------+------------+-------------+-----------------------------------------+
+| Time (%) | Total Time (ns) | Instances |  Avg (ns)  | Med (ns)  | Min (ns) |  Max (ns)  | StdDev (ns) |                  Range                  |
++----------+-----------------+-----------+------------+-----------+----------+------------+-------------+-----------------------------------------+
+|     90.0 |      2967545638 |        50 | 59350912.8 | 2330582.0 |  2181339 | 2846301573 | 402178183.4 | :full_slam_cycle                        |
+|      6.3 |       207324933 |        50 |  4146498.7 | 1168387.0 |  1104013 |  146730128 |  20576890.2 | :stage1_feature_extraction              |
+|      3.5 |       116194032 |        50 |  2323880.6 |  929644.5 |   836589 |   66364681 |   9246600.3 | :stage2_vio_ekf                         |
+|      0.1 |         4760645 |        50 |    95212.9 |   62031.0 |    48229 |    1603351 |    217958.0 | :data_input                             |
+|      0.1 |         1911519 |       100 |    19115.2 |   13249.0 |    10572 |     327284 |     33384.6 | CCCL:cub::DeviceScan::InclusiveSumByKey |
++----------+-----------------+-----------+------------+-----------+----------+------------+-------------+-----------------------------------------+
+
+Processing [profiling\nsight_reports\session1_slam_baseline.sqlite] with [C:\Program Files\NVIDIA Corporation\Nsight Systems 2026.3.1\target-windows-x64\reports\cuda_api_sum.py]... 
+
+ ** CUDA API Summary (cuda_api_sum):
+
++----------+-----------------+-----------+-----------+-----------+----------+----------+-------------+-----------------------------+
+| Time (%) | Total Time (ns) | Num Calls | Avg (ns)  | Med (ns)  | Min (ns) | Max (ns) | StdDev (ns) |            Name             |
++----------+-----------------+-----------+-----------+-----------+----------+----------+-------------+-----------------------------+
+|     78.2 |       189938168 |      4452 |   42663.6 |    4851.0 |     3020 | 24487374 |    669260.7 | cudaLaunchKernel            |
+|      6.1 |        14781339 |         4 | 3695334.8 | 4441145.0 |   820939 |  5078110 |   1941647.9 | cuLibraryLoadData           |
+|      5.0 |        12257243 |       202 |   60679.4 |    8051.5 |      908 |   745613 |    115094.1 | cudaDeviceSynchronize       |
+|      4.9 |        11844978 |       800 |   14806.2 |    9024.5 |     4842 |   310554 |     21152.1 | cudaMemcpyAsync             |
+|      1.4 |         3381845 |         7 |  483120.7 |    2227.0 |      544 |  3367864 |   1272054.2 | cudaFree                    |
+|      1.2 |         2837256 |       200 |   14186.3 |   12744.0 |     3836 |    47961 |      6968.7 | cudaEventRecordWithFlags    |
+|      0.9 |         2300806 |        19 |  121095.1 |     916.0 |      697 |  2239796 |    513132.6 | cudaStreamCreateWithFlags   |
+|      0.8 |         1839203 |        24 |   76633.5 |   59825.0 |     2308 |   201903 |     71861.7 | cudaMalloc                  |
+|      0.4 |         1004685 |       160 |    6279.3 |    5446.0 |     2477 |    77675 |      7706.7 | cudaMemsetAsync             |
+|      0.3 |          650939 |         2 |  325469.5 |  325469.5 |    15966 |   634973 |    437704.0 | cudaHostAlloc               |
+|      0.2 |          597559 |        50 |   11951.2 |    9246.5 |     7591 |   104348 |     13545.8 | cudaStreamSynchronize       |
+|      0.2 |          418775 |      2634 |     159.0 |     123.0 |       72 |     2547 |       152.0 | cuGetProcAddress_v2         |
+|      0.1 |          330857 |       291 |    1137.0 |     917.0 |      252 |    30263 |      1887.4 | cudaEventCreateWithFlags    |
+|      0.1 |          152444 |       300 |     508.1 |     308.5 |      219 |     9087 |       696.9 | cudaStreamGetCaptureInfo_v2 |
+|      0.1 |          132885 |       200 |     664.4 |     419.5 |      287 |     5386 |       546.1 | cudaEventQuery              |
+|      0.0 |          115596 |       207 |     558.4 |     513.0 |      266 |     7654 |       578.1 | cudaStreamIsCapturing       |
+|      0.0 |           92638 |       200 |     463.2 |     316.5 |      263 |     1711 |       275.9 | cudaEventDestroy            |
+|      0.0 |           30178 |         4 |    7544.5 |    5759.0 |     4516 |    14144 |      4446.4 | cuLibraryGetKernel          |
+|      0.0 |           29389 |         7 |    4198.4 |    1267.0 |      619 |    22660 |      8154.9 | cuInit                      |
+|      0.0 |           14703 |         1 |   14703.0 |   14703.0 |    14703 |    14703 |         0.0 | cuCtxSynchronize            |
+|      0.0 |            8583 |         7 |    1226.1 |     144.0 |      107 |     7506 |      2770.9 | cuModuleGetLoadingMode      |
+|      0.0 |            4564 |         3 |    1521.3 |     732.0 |      729 |     3103 |      1369.8 | cudaEventCreate             |
+|      0.0 |            4442 |         4 |    1110.5 |    1054.5 |      775 |     1558 |       366.8 | cudaGetDeviceProperties     |
+|      0.0 |            1942 |         7 |     277.4 |     270.0 |      145 |      372 |        75.3 | cuDeviceGetLuid             |
+|      0.0 |             970 |         2 |     485.0 |     485.0 |      198 |      772 |       405.9 | cudaGetDriverEntryPoint     |
++----------+-----------------+-----------+-----------+-----------+----------+----------+-------------+-----------------------------+
+
+Processing [profiling\nsight_reports\session1_slam_baseline.sqlite] with [C:\Program Files\NVIDIA Corporation\Nsight Systems 2026.3.1\target-windows-x64\reports\cuda_gpu_kern_sum.py]... 
+
+ ** CUDA GPU Kernel Summary (cuda_gpu_kern_sum):
+
++----------+-----------------+-----------+----------+----------+----------+----------+-------------+------------------------------------------------------------------------------------------------------+
+| Time (%) | Total Time (ns) | Instances | Avg (ns) | Med (ns) | Min (ns) | Max (ns) | StdDev (ns) |                                                 Name                                                 |
++----------+-----------------+-----------+----------+----------+----------+----------+-------------+------------------------------------------------------------------------------------------------------+
+|     44.2 |        18476323 |       150 | 123175.5 | 123198.0 |   122910 |   123838 |       133.1 | void cudnn::cnn::conv2d_grouped_direct_kernel<(bool)0, (bool)1, (bool)0, (bool)0, (bool)0, (bool)0,… |
+|      9.2 |         3828111 |       550 |   6960.2 |   8352.0 |     1312 |    47104 |      6572.5 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctor_add<float>, std::arr… |
+|      5.1 |         2144491 |       100 |  21444.9 |  21408.0 |    12224 |    30784 |      9204.0 | void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::n… |
+|      4.6 |         1926082 |       150 |  12840.5 |   9039.5 |     8352 |    21440 |      5727.6 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor<float, float, floa… |
+|      4.1 |         1703944 |       200 |   8519.7 |   8111.5 |     7712 |    10272 |       926.2 | void at::native::mbtopk::computeBlockDigitCounts<float, unsigned int, unsigned int, (int)1>(at::cud… |
+|      3.2 |         1335049 |        50 |  26701.0 |  27551.0 |    23616 |    29056 |      1481.6 | void at::native::mbtopk::gatherTopK<float, unsigned int, (int)1>(at::cuda::detail::TensorInfo<const… |
+|      2.8 |         1150988 |       100 |  11509.9 |  11519.0 |    11455 |    11584 |        30.4 | void at::native::<unnamed>::distribution_elementwise_grid_stride_kernel<float, (int)4, void at::nat… |
+|      2.7 |         1130413 |       150 |   7536.1 |   7487.0 |     7168 |     8447 |       249.7 | void at::native::vectorized_elementwise_kernel<(int)4, void at::native::<unnamed>::pow_tensor_scala… |
+|      2.1 |          892854 |       100 |   8928.5 |   8912.0 |     8576 |     9471 |       241.9 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::BinaryFunctor<float, float, floa… |
+|      2.1 |          890227 |        50 |  17804.5 |  17823.0 |    17056 |    17952 |       122.8 | void at::native::radixSortKVInPlace<(int)-2, (int)-1, (int)32, (int)32, float, long long, unsigned … |
+|      1.8 |          758805 |       100 |   7588.1 |   7488.0 |     7296 |     8511 |       234.4 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::neg_kernel_cuda(at::TensorIterat… |
+|      1.8 |          752981 |       100 |   7529.8 |   7456.0 |     7264 |     7968 |       179.5 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::CUDAFunctorOnSelf_add<float>, st… |
+|      1.8 |          737303 |       200 |   3686.5 |   3680.0 |     3552 |     3776 |        52.7 | at::native::mbtopk::computeDigitCumSum(short *, unsigned int *, unsigned int)                        |
+|      1.5 |          637625 |        50 |  12752.5 |  12720.0 |    12384 |    13216 |       199.3 | void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::n… |
+|      1.4 |          585750 |        50 |  11715.0 |  11648.0 |    11519 |    12256 |       169.1 | void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<void … |
+|      1.2 |          505019 |       200 |   2525.1 |   2464.0 |     2336 |     2752 |       108.3 | void at::native::mbtopk::computeBlockwiseWithinKCounts<unsigned int, float>(T1 *, short *, unsigned… |
+|      1.1 |          445404 |       103 |   4324.3 |   1568.0 |     1280 |     7808 |      3096.8 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::AUnaryFunctor<float, float, floa… |
+|      0.8 |          349175 |       150 |   2327.8 |   2368.0 |     1951 |     2784 |       282.3 | void gemmSN_NN_kernel<float, (int)256, (int)4, (int)2, (int)8, (int)4, (int)4, (bool)0, cublasGemvT… |
+|      0.7 |          311003 |       150 |   2073.4 |   1952.0 |     1888 |     2720 |       203.9 | std::enable_if<!T7, void>::type internal::gemvx::kernel<int, int, float, float, float, float, (bool… |
+|      0.7 |          307583 |       222 |   1385.5 |   1184.0 |     1119 |     6912 |      1016.4 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::FillFunctor<float>, std::array<c… |
+|      0.7 |          287067 |       100 |   2870.7 |   2720.0 |     2656 |     3104 |       186.0 | void at_cuda_detail::cub::DeviceScanByKeyKernel<at_cuda_detail::cub::DeviceScanByKeyPolicy<at_cuda_… |
+|      0.7 |          280894 |       151 |   1860.2 |   1696.0 |     1536 |     3040 |       403.4 | void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::n… |
+|      0.6 |          235868 |       100 |   2358.7 |   2432.0 |     2207 |     2656 |       147.0 | void gemmSN_TN_kernel<float, (int)128, (int)16, (int)2, (int)4, (int)8, (int)9, (bool)0, cublasGemv… |
+|      0.6 |          232796 |        50 |   4655.9 |   4655.5 |     4639 |     4672 |        16.2 | void trsm_batch_left_upper_kernel_small<float, (int)4, (int)4, (int)64>(cublasTrsmBatchParams<T1>, … |
+|      0.5 |          214526 |       155 |   1384.0 |   1376.0 |     1343 |     1568 |        28.4 | void at::native::elementwise_kernel<(int)128, (int)2, void at::native::gpu_kernel_impl_nocast<at::n… |
+|      0.5 |          192190 |        50 |   3843.8 |   3872.0 |     3680 |     3936 |        67.7 | void getrf_pivot<getrf_params_<float, (int)32, (int)1, (int)32, (int)32, (int)1>>(int, int, int, vo… |
+|      0.3 |          126656 |        50 |   2533.1 |   2528.0 |     2496 |     2688 |        25.3 | void trsm_batch_left_lower_kernel_small<float, (int)4, (int)4, (int)64>(cublasTrsmBatchParams<T1>, … |
+|      0.3 |          122942 |        50 |   2458.8 |   2464.0 |     2431 |     2464 |        11.9 | void gemmSN_NN_kernel<float, (int)256, (int)4, (int)2, (int)8, (int)3, (int)4, (bool)0, cublasGemvT… |
+|      0.3 |          112061 |       100 |   1120.6 |   1120.0 |     1087 |     1152 |        18.2 | void <unnamed>::elementwise_kernel_with_index<int, at::native::arange_cuda_out(const c10::Scalar &,… |
+|      0.3 |          108253 |       100 |   1082.5 |   1088.0 |     1055 |     1120 |        15.2 | void at_cuda_detail::cub::DeviceScanByKeyInitKernel<at_cuda_detail::cub::ReduceByKeyScanTileState<u… |
+|      0.2 |          102047 |        50 |   2040.9 |   2048.0 |     2016 |     2048 |        13.4 | void gemmSN_TN_kernel<float, (int)128, (int)16, (int)2, (int)4, (int)4, (int)4, (bool)0, cublasGemv… |
+|      0.2 |           99397 |        21 |   4733.2 |   2560.0 |     2080 |     8193 |      2774.3 | void at::native::reduce_kernel<(int)512, (int)1, at::native::ReduceOp<float, at::native::func_wrapp… |
+|      0.2 |           98751 |        50 |   1975.0 |   1984.0 |     1952 |     2080 |        28.9 | void ipiv_lower_small<float, (int)32>(int, void *, int, long long *, int, int)                       |
+|      0.2 |           95327 |        50 |   1906.5 |   1888.0 |     1728 |     2048 |        52.2 | void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIterator… |
+|      0.2 |           91038 |        50 |   1820.8 |   1824.0 |     1792 |     1856 |        13.3 | void at::native::<unnamed>::distribution_elementwise_grid_stride_kernel<float, (int)4, void at::nat… |
+|      0.2 |           77726 |        50 |   1554.5 |   1536.0 |     1535 |     1696 |        28.3 | void laswp_kernel<float, (bool)0>(int, T1 *const *, int, int, int, const int *, int, int, int)       |
+|      0.2 |           77056 |        50 |   1541.1 |   1536.0 |     1536 |     1568 |        11.9 | void at::native::mbtopk::computeBlockwiseKthCounts<unsigned int>(T1 *, short *, unsigned int, unsig… |
+|      0.2 |           75615 |        50 |   1512.3 |   1504.0 |     1503 |     1536 |        14.2 | void create_pivot_v2<(int)32>(int, int *, long long *, int)                                          |
+|      0.2 |           66336 |        50 |   1326.7 |   1312.0 |     1312 |     1440 |        22.6 | void at::native::vectorized_elementwise_kernel<(int)4, at::native::BUnaryFunctor<float, float, floa… |
+|      0.1 |           61599 |        50 |   1232.0 |   1232.0 |     1215 |     1248 |        16.2 | void ipiv_64_to_32_ker<(int)128>(long long, const long long *, int *)                                |
+|      0.1 |           55264 |        50 |   1105.3 |   1088.0 |     1088 |     1248 |        26.0 | xxtrf4_set_info_ker(int, int *)                                                                      |
+|      0.1 |           54944 |        50 |   1098.9 |   1088.0 |     1088 |     1120 |        15.3 | void ipiv_lower_diag<float, (int)32>(int, void *, int, int *, int)                                   |
+|      0.1 |           54622 |        50 |   1092.4 |   1088.0 |     1087 |     1120 |        11.2 | void at::native::mbtopk::fill<unsigned int, unsigned int>(T1 *, T1, T2)                              |
++----------+-----------------+-----------+----------+----------+----------+----------+-------------+------------------------------------------------------------------------------------------------------+
+
+Processing [profiling\nsight_reports\session1_slam_baseline.sqlite] with [C:\Program Files\NVIDIA Corporation\Nsight Systems 2026.3.1\target-windows-x64\reports\cuda_gpu_mem_time_sum.py]... 
+
+ ** CUDA GPU MemOps Summary (by Time) (cuda_gpu_mem_time_sum):
+
++----------+-----------------+-------+----------+----------+----------+----------+-------------+--------------------------------+
+| Time (%) | Total Time (ns) | Count | Avg (ns) | Med (ns) | Min (ns) | Max (ns) | StdDev (ns) |           Operation            |
++----------+-----------------+-------+----------+----------+----------+----------+-------------+--------------------------------+
+|     97.6 |         5153717 |   750 |   6871.6 |   1360.0 |     1183 |    63231 |      7544.2 | [CUDA memcpy Device-to-Device] |
+|      1.5 |           77663 |   160 |    485.4 |    480.0 |      384 |     1536 |       112.5 | [CUDA memset]                  |
+|      0.9 |           49245 |    50 |    984.9 |    928.0 |      896 |     1664 |       142.1 | [CUDA memcpy Device-to-Host]   |
++----------+-----------------+-------+----------+----------+----------+----------+-------------+--------------------------------+
+
