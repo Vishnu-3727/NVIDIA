@@ -1,0 +1,9 @@
+[project]
+name = "nerc-new"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11.9"
+dependencies = [
+    "ultralytics>=8.4.67",
+]
